@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <h3 class="logo"><a href="./index.html">Users</a></h3>
+
+        <div class="links">
+          <a class="link" href="student.html">Student</a>
+          <a class="link" href="index.html">Users</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="btn-container">
+        <button class="btn" >Add user</button>
+      </div>
+
+      <section class="users-wrapper">
+        <div class="container users-container">
+          
+        </div>
+      </section>
+    </main>
+
+    <!-- add -->
+
+    <div class="modal-overlay hidden" id="userModal">
+      <div class="modal">
+        <div class="modal__header">
+          <h2 class="modal__title">Yangi foydalanuvchi qo'shish</h2>
+          <button type="button" class="modal__close" aria-label="Yopish">
+            &times;
+          </button>
+        </div>
+
+        <form class="modal__form" id="addUserForm">
+          <div class="modal__field">
+            <label class="modal__label" for="userName">Ism va familiya</label>
+            <input
+              class="modal__input"
+              type="text"
+              id="userName"
+              name="name"
+              placeholder="Masalan: Ali Valiyev"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label class="modal__label" for="userEmail">Email</label>
+            <input
+              class="modal__input"
+              type="email"
+              id="userEmail"
+              name="email"
+              placeholder="ali@example.com"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label class="modal__label" for="userRole">Rol</label>
+            <select class="modal__select" id="userRole" name="role">
+              <option value="user">User</option>
+              <option value="moderator">Moderator</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+
+          <div class="modal__checkbox-group">
+            <input
+              class="modal__checkbox"
+              type="checkbox"
+              id="userIsActive"
+              name="isActive"
+              checked
+            />
+            <label class="modal__checkbox-label" for="userIsActive"
+              >Faol holatda (isActive)</label
+            >
+          </div>
+
+          <div class="modal__actions">
+            <button type="reset" class="modal__btn modal__btn--reset">
+              Tozalash
+            </button>
+            <button type="submit" class="modal__btn modal__btn--submit"  id="saqlash">
+              Saqlash
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
